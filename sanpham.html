@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sản phẩm</title>
+    <style>
+        .product {
+            display: flex;
+            /* kich hoat flex box */
+            flex-flow: row wrap;
+        }
+        
+        .product>* {
+            padding: 10px;
+            flex: 1 100%;
+        }
+        
+        .card {
+            display: block;
+            flex: 5 0px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            width: 20%;
+            margin: 10px;
+            text-align: center;
+            font-family: arial;
+            float: left;
+        }
+        
+        .price {
+            color: grey;
+            font-size: 30px;
+        }
+        
+        .card button {
+            border: none;
+            outline: 0;
+            padding: 12px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 20px;
+        }
+        
+        .card button:hover {
+            opacity: 0.7;
+        }
+        
+        .cart {
+            color: azure;
+            background-color: rgb(187, 133, 75);
+            width: 100%;
+            height: 1000px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th {
+            background-color: rgb(114, 104, 98);
+            padding: 10px;
+        }
+        
+        th,
+        td {
+            border: 1px #ccc solid;
+            text-align: center;
+        }
+        
+        .row {
+            float: left;
+            width: 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="product">
+        <div class="card">
+            <img src="H1.jpg" alt="Apple Watch" style="width: 100%" />
+            <h1>iPhone 12</h1>
+            <p class="price">19.99</p>
+            <p>Mô tả chi tiết sản phẩm</p>
+            <button>THÊM VÀO GIỎ</button>
+        </div>
+        <div class="card">
+            <img src="H2.jpg" alt="Apple Watch" style="width: 100%" />
+            <h1>iPhone X</h1>
+            <p class="price">16.99</p>
+            <p>Mô tả chi tiết sản phẩm</p>
+            <button>THÊM VÀO GIỎ</button>
+        </div>
+        <div class="card">
+            <img src="H3.jpg" alt="Apple Watch" style="width: 100%" />
+            <h1>iPhone 10</h1>
+            <p class="price">10.99</p>
+            <p>Mô tả chi tiết sản phẩm</p>
+            <button>THÊM VÀO GIỎ</button>
+        </div>
+        <div class="card">
+            <img src="H4.jpg" alt="Apple Watch" style="width: 100%" />
+            <h1>iPhone 13</h1>
+            <p class="price">11.99</p>
+            <p>Mô tả chi tiết sản phẩm</p>
+            <button>THÊM VÀO GIỎ</button>
+        </div>
+        <div class="card">
+            <img src="H5.jpg" alt="Apple Watch" style="width: 100%" />
+            <h1>iPhone 11</h1>
+            <p class="price">17.99</p>
+            <p>Mô tả chi tiết sản phẩm</p>
+            <button>THÊM VÀO GIỎ</button>
+        </div>
+        <div class="cart">
+            <hr />
+            <h1 style="text-align: center">GIỎ HÀNG</h1>
+            <article>
+                <form action="">
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th style="width: 180px; padding: 15px;">Hình</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Đơn giá</th>
+                                <th>số lượng</th>
+                                <th style="padding: 0px; width:0px; "></th>
+                                <th>Xóa</th>
+                            </tr>
+
+
+                        </thead>
+                        <tbody>
+                            <thead>
+                                <tr>
+                                    <th>Tổng</th>
+                                    <th>
+                                        <div class="price-total">
+                                            <p>Tổng đơn hàng: $<span>0</span></p>
+
+                                        </div>
+                                    </th>
+                                </tr>
+
+                            </thead>
+                    </table>
+                    <div class="card">
+                        <button onclick="checkout()">Thanh toán</button>
+                    </div>
+                </form>
+            </article>
+        </div>
+    </div>
+    <script src="js/cart.js"></script>
+</body>
+
+</html>
